@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  Nunito;
+}
+html{
+  height: 100%;
+  background-color: #ecf1ff85;
+}
+.container{
+  padding: 0 5px;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+header div:first-child{
+  
+  background-color: #212940;    
+}
+header div ~ div:last-child{
+  background: url(../img/svg.png) left top/cover no-repeat;
+  height: 70px;
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.flex div{
+  width: 180px;
+  height: 100px;
+}
+.flex img{
+  margin: 20px 0 0 10px;
+  width: 100%;
+  animation: anima-logo .5s ease-in;
+}
+.flex h1{
+  position: relative;
+  color: #ffc107;
+  font-size: 40px;
+  padding: 10px 30px 0 30px;
+  animation: anima-h1 .5s ease-in;
+}
+.flex h1::before{
+  position: absolute;
+  bottom: -5px;
+  content: "";
+  width: 30%;
+  height: 10px;
+  background-color: #ff5722;
+}
+.container section:first-child{
+  padding-top: 50px;
+}
+.container section:first-child p{
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 25px;
+  background-color: #f9c97b5d;
+  color: #212940;
+  animation: anima-p .5s ease-in;
+}
+.container section:last-child{
+  padding-top: 20px;
+}
+.btn-controle{
+  margin-top: 30px;
+  display: flex;
+  animation: anima-btn 1s ease;
+}
+
+.btn-controle div{
+  position: relative;
+}
+.btn-controle div label{
+  top: 10px;
+  left: 25px;
+  position: absolute;
+  transition: .5s;
+  color: gray;
+}
+.btn-controle input{
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 5px;
+  border: none;
+  transition: outline-width .5s ;
+  box-shadow: 0px 0px 10px rgba(117, 117, 117, 0.452);
+}
+.btn-controle button{
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 5px;
+  border: none;
+  transition: color .5s;
+  box-shadow: 0px 0px 10px rgba(85, 85, 85, 0.452);
+}
+.btn-controle button:hover{
+  background-color: rgb(126, 126, 126);
+  color: rgb(252, 252, 252);
+}
+.btn-controle button:active{
+  box-shadow: none;
+}
+.btn-controle input:focus,
+.btn-controle input:valid{
+  outline: 2px solid rgba(128, 128, 128, 0.425);
+}
+.btn-controle input:focus ~ label,
+.btn-controle input:valid ~ label{
+ top: -25px;
+ left: 10px;
+ color: #000;
+}
+table{
+  color: #212940;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  outline-offset: 2px;
+  outline: 2px solid gray;
+  text-align: center;
+  border-collapse: collapse;
+  animation: anima-logo1 .5s ease-in;
+  margin: 25px 0;
+}
+table thead th{
+  color: #212940;
+  padding: 10px;
+  background-color: #f9c97b;
+}
+table tr th{
+  width: 50%;
+}
+table tbody tr:nth-child(even) {
+  background-color: #9bafba86;
+}
+table tbody tr td{
+  padding: 5px;
+}
+table tbody tr:hover{
+  background-color: rgb(230, 226, 215);
+}
+table tfoot{
+  font-size: 25px;
+  background-color: #ff5722;
+}
+table tfoot td{
+  padding: 10px;
+}
+footer{
+  margin-top: 20px;
+  background-color: #212940;
+  padding: 40px 0;
+}
+footer p{
+  text-align: center;
+  color: #ffc107;
+  font-size: 20px;
+  font-weight: 500;
+}
+@keyframes anima-logo {
+  0%{
+    margin-left: -150px;
+    opacity: 0;
+  }
+  100%{
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes anima-h1 {
+  0%{
+    margin-top: -100px;
+    opacity: 0;
+  }
+  100%{
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes anima-p {
+  0%{
+    opacity: 0;
+  }  
+}
+@keyframes anima-btn {
+  0%{
+    margin-left: -10000px;
+    opacity: 0;
+  }
+}
+@keyframes anima-logo1 {
+  0%{
+    margin-left: 150px;
+    opacity: 0;
+  }
+  100%{
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 700px) {
+  table{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .flex{
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .flex div{
+    position: initial;
+  }
+  .flex img{
+    position: initial;
+  }
+  .flex h1{
+    padding: 10px;
+    font-size: 40px;
+  }
+  .btn-controle{
+    flex-direction: column;
+  }
+  .btn-controle div{
+    padding: 5px;
+  }
+  .btn-controle div input,
+  .btn-controle div button{
+    font-size: 20px;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .btn-controle div label{
+    top: 15px;
+    font-size: 20px;
+  }
+  .btn-controle input:focus ~ label,
+  .btn-controle input:valid ~ label{
+    opacity: 0;
+  }
+}

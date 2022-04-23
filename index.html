@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <div class="container flex">
+        <div>
+          <img src="assets/img/carrinhoheader.png" alt="Carrinho de Compras">
+        </div>
+        <h1>Carrinho de Compras</h1>
+      </div>
+    </div>
+    <div></div>
+  </header>
+  <div class="container" style="overflow: hidden;">
+    <section>
+      <p>
+        Adicione os itens ao Carrinho !!!
+      </p>
+      <div class="btn-controle">
+        <div>
+          <input type="text" name="item" id="item" required>
+          <label for="item">Insira o item:</label>
+        </div>
+        <div>
+          <input type="text" name="valor" id="valor" required>
+          <label for="valor">Valor R$:</label>
+        </div>
+        <div>
+          <button>Adicionar</button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Preço R$</th>
+          </tr>
+        </thead>
+        <tbody id="tabela">
+
+        </tbody>
+        <tfoot>
+          <tr><td colspan="2" id="soma">
+            Total:
+          </td></tr>
+        </tfoot>
+      </table>
+    </section>
+  </div>
+  <footer>
+    <p>- RetroLipe &#169; -</p>
+  </footer>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
